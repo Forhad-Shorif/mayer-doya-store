@@ -43,7 +43,6 @@ const Marquee = async () => {
     if (!products.length) {
         return null;
     }
-    const Bn = products[0]?.unit ? translateUnit(products[0].unit) : "টা";
 
     return (
         <div className="sticky top-0 z-30 w-full backdrop-blur-md border-b border-slate-800 shadow-lg py-1">
