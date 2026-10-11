@@ -39,7 +39,7 @@ const CategoriesPage = async ({ params }: CategoryProps) => {
             <section>
                 
                 {/* Product top List Title */}
-                <div className="flex items-center gap-3 mb-5 px-1">
+                <div className="flex items-center gap-3 mb-4 bg-white py-1 rounded-2xl px-1">
                     <span className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-2xl shrink-0">
                         {filteredProducts[0]?.categoryIcon || "🥬"}
                     </span>

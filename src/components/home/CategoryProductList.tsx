@@ -50,24 +50,28 @@ const CategoryProductList = ({ productsData }: CategoryProductListProps) => {
             {/* Top side */}
             <div className="flex flex-col gap-4 pb-3 px-1">
 
-                <div className="text-xs sm:text-sm font-medium text-slate-700">
-                    মোট <span className="font-bold text-[15px] text-slate-900">{toBengaliNumber(products.length)}</span> টি পণ্য দেখানো হচ্ছে
+                {/* Select Box */}
+                <div className="flex justify-end w-full bg-white p-4 sm:p-3 rounded-2xl">
+                    <fieldset className="fieldset bg-base-100 p-3 rounded-xl shadow-sm border border-base-200">
+                        <div className="flex flex-row items-center gap-2">
+                            <legend className="fieldset-legend text-slate-600 font-medium text-sm sm:text-base mb-0">
+                                সাজান
+                            </legend>
+                            <select
+                                value={item}
+                                onChange={(e) => setItem(e.target.value as "default" | "High" | "Low")}
+                                className="select select-bordered select-sm sm:select-md bg-base-200/50 focus:bg-base-100 transition-all">
+                                <option disabled={true}>দাম সাজান</option>
+                                <option value="default">সব পণ্য</option>
+                                <option value="High">দাম: বেশি থেকে কম</option>
+                                <option value="Low">দাম: কম থেকে বেশি</option>
+                            </select>
+                        </div>
+                    </fieldset>
                 </div>
 
-                {/* Select Box */}
-                <div className="flex justify-end w-full bg-slate-50 p-4 sm:p-3 rounded-2xl">
-
-                    {/* Select Options */}
-                    <select
-                        className="w-[140px] sm:w-[220px] px-3.5 py-2 text-xs sm:text-sm font-medium text-gray-700 bg-white border border-slate-200 rounded-xl shadow-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition-all duration-200 hover:border-blue-400"
-                        value={item}
-                        onChange={(e) => setItem(e.target.value as "default" | "High" | "Low")}
-                    >
-                        <option value="default">সব পণ্য</option>
-                        <option value="High">দাম: বেশি থেকে কম</option>
-                        <option value="Low">দাম: কম থেকে বেশি</option>
-                    </select>
-
+                <div className="text-xs sm:text-sm font-medium text-slate-700">
+                    মোট <span className="font-bold text-[15px] text-slate-900">{toBengaliNumber(products.length)}</span> টি পণ্য দেখানো হচ্ছে
                 </div>
             </div>
 
