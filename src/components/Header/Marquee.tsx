@@ -56,6 +56,7 @@ const Marquee = async () => {
                 >
                     {products.map((item: Types, index: number) => {
 
+                        // Unit
                         const Bn = item?.unit ? translateUnit(item.unit) : "টা";
                         const BnNum = item.change?.pct ? toBengaliNumber(item.change.pct) : "০";
                         return (
