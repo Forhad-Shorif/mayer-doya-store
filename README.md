@@ -40,7 +40,7 @@
 ## 🔗 প্রজেক্ট লিংকসমূহ (Project Links)
 
 * **GitHub Repository:** [mayer-doya-store on GitHub](https://github.com/Forhad-Shorif/mayer-doya-store)
-* **Live Deployment Link:** [View Live App](#) *(লিভিউট ডিপ্লেইন লিংক)*
+* **Live Deployment Link:** [https://mayer-doya-store.vercel.app/]
 
 ---
 
