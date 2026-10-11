@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# বাজার দর (Mayer Doya Store) 🛒
 
-## Getting Started
+একটি আধুনিক, দ্রুতগতির এবং রেসপন্সিভ ই-কমার্স ও বাজার দর ট্র্যাকিং প্ল্যাটফর্ম, যা প্রতিদিনের নিত্যপ্রয়োজনীয় পণ্যের বাজার দর এক নজরে দেখতে এবং নিখুঁতভাবে পরিচালনা করতে সাহায্য করে।
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌟 প্রজেক্টের সংক্ষিপ্ত বিবরণ (About The Project)
+**বাজার দর** (Mayer Doya Store) হলো একটি ফুল-স্ট্যাক ওয়েব অ্যাপ্লিকেশন, যা সাধারণ ব্যবহারকারী এবং ক্রেতাদের জন্য প্রতিদিনের বাজারের পণ্যের সঠিক দাম, বাজারের তারতম্য এবং বিভিন্ন ক্যাটাগরির পণ্য সহজে ব্রাউজ করার সুবিধা প্রদান করে। এতে রয়েছে আকর্ষণীয় ইউজার ইন্টারফেস, রিয়েল-টাইম প্রাইস টিকার, নিরাপদ ব্যবহারকারী প্রমাণীকরণ এবং বাজারভিত্তিক দামের তুলনামূলক বিশ্লেষণ।
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ ব্যবহৃত প্রযুক্তি (Tech Stack)
+* **Frontend:** Next.js (App Router), React, Tailwind CSS, DaisyUI
+* **Authentication:** Better Auth (Email/Password, Google, GitHub)
+* **Styling & Icons:** Tailwind CSS, Lucide Icons
+* **Language:** TypeScript / JavaScript
+* **Deployment:** Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ ৫টি মূল বৈশিষ্ট্য (Key Features)
 
-To learn more about Next.js, take a look at the following resources:
+1. **ডাইনামিক প্রাইস টিকার (Price Ticker):** নেভবারের নিচে অসীম স্ক্রোলিং স্ট্রিপের মাধ্যমে লাইভ পণ্যের দাম এবং শতকরা পরিবর্তন (▲/▼) প্রদর্শন।
+2. **বাজারভিত্তিক পণ্যের বিস্তারিত বিবরণ (`/product/[slug]`):** নির্দিষ্ট পণ্যের সর্বনিম্ন, সর্বোচ্চ এবং গড় দাম সহ দেশের বিভিন্ন বাজারের পাইকারি ও খুচরা দামের তুলনা এবং সুরক্ষিত রাউট।
+3. **উন্নত ক্যাটাগরি ও ফিল্টারিং সিস্টেম (`/category`):** চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম-দুধ এবং মসলার মতো বিভিন্ন ক্যাটাগরিতে পণ্য ফিল্টার ও সাজানোর সুবিধা (কম থেকে বেশি / বেশি থেকে কম দাম) এবং স্কেলেটন লোডার।
+4. **নিরাপদ অথেন্টিকেশন ও প্রোফাইল আপডেট (`/signin`, `/signup`):** Better Auth-এর মাধ্যমে ইমেল-পাসওয়ার্ড এবং সোশ্যাল লগইন (গুগল/গিটহাব), টোস্ট নোটিফিকেশন এবং ব্যবহারকারীর নাম আপডেট করার ফিচার।
+5. **সম্পূর্ণ রেসপন্সিভ ডিজাইন ও 404 হ্যান্ডলিং:** মোবাইল, ট্যাবলেট এবং ডেস্কটপ স্ক্রিনের জন্য পারফেক্ট লেআউট এবং যেকোনো অজানা রুটের জন্য ফ্রেন্ডলি 404 পেজ।
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 লোকাল মেশিনে রান করার নির্দেশিকা (Getting Started)
 
-## Deploy on Vercel
+প্রজেক্টটি আপনার লোকাল কম্পিউটারে চালাতে নিচের ধাপগুলো অনুসরণ করুন:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **রিপোজিটরি ক্লোন করুন:**
+   ```bash
+   git clone [https://github.com/Forhad-Shorif/mayer-doya-store.git](https://github.com/Forhad-Shorif/mayer-doya-store.git)
+   ---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔗 প্রজেক্ট লিংকসমূহ (Project Links)
+
+* **GitHub Repository:** [mayer-doya-store on GitHub](https://github.com/Forhad-Shorif/mayer-doya-store)
+* **Live Deployment Link:** [View Live App](#) *(লিভিউট ডিপ্লেইন লিংক)*
+
+---
+
+## 👤 লেখক (Author)
+
+** ফোরহাদ শরীফ(Forhad Shorif)**  
+* GitHub: [@Forhad-Shorif](https://github.com/Forhad-Shorif)
+
+---
+
+## 📝 লাইসেন্স (License)
+এই প্রজেক্টটি [MIT License](LICENSE) এর আওতাধীন মুক্তভাবে ব্যবহৃত।

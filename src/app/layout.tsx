@@ -1,15 +1,16 @@
+import dns from 'node:dns';
+dns.setServers(['8.8.8.8', '8.8.4.4'])
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {Noto_Serif_Bengali} from "next/font/google";
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
+import Navbar from "@/components/Header/Navbar"
+import CatLinks from "@/components/Header/CatLinks"
+import Marquee from '@/components/Header/Marquee';
+import Footer from "@/components/Footer/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const notoSerifBengali = Noto_Serif_Bengali({
+  subsets: ["latin", "bengali"],
 });
 
 export const metadata: Metadata = {
@@ -20,10 +21,20 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="bn"
+      data-theme="light"
+      className={`${notoSerifBengali.className} font-sans bg-slate-50`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+
+        <Navbar></Navbar>
+        <CatLinks></CatLinks>
+        <Marquee></Marquee>
+        {children}
+        <Footer></Footer>
+         < ToastContainer  /> 
+         
+        </body>
     </html>
   );
 }
