@@ -51,7 +51,7 @@ const Marquee = async () => {
                 {/* Marquee Text */}
                 <MarqueeText
                     gradient={false}
-                    speed={45}
+                    speed={60}
                     className="flex items-center gap-4 py-0.5"
                 >
                     {products.map((item: Types, index: number) => {
