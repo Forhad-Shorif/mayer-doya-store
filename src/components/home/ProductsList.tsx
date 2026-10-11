@@ -59,7 +59,7 @@ const ProductsList = ({ products }: { products: Product[] }) => {
                                 <div>
                                     <span className="text-xs text-gray-700 block mb-0.5">আজকের দাম</span>
                                     <h4 className="text-xl font-bold text-black">
-                                        {product.today} <span className="text-sm font-normal text-gray-800">টাকা</span>
+                                        {toBengaliNumber(product?.today)} <span className="text-sm font-normal text-gray-800">টাকা</span>
                                     </h4>
                                 </div>
 
@@ -71,7 +71,7 @@ const ProductsList = ({ products }: { products: Product[] }) => {
                                     >
                                         <span>{product.change?.dir === "up" ? "▲" : product.change?.dir === "down" ? "▼" : <span>—</span>}</span>
                                         <span>
-                                            {product.change?.dir === "up"? <span>{BnNum}</span> : product.change?.dir === "flat"  ? <span>০.{toBengaliNumber(BnNum)}</span> : product.change?.pct ? toBengaliNumber(product.change.pct * -1) : 0}%
+                                            {product.change?.dir === "up"? <span>{BnNum}</span> : product.change?.dir === "flat"  ? <span>০.{BnNum}</span> : product.change?.pct ? toBengaliNumber(product.change.pct * -1) : 0}%
                                         </span>
                                     </div>
                                 )}

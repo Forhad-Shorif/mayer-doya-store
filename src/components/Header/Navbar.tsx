@@ -3,7 +3,7 @@ import { HiShoppingCart } from "react-icons/hi";
 
 const Navbar = () => {
 
-        // Today date
+    // Today date
     const date = new Date().toLocaleDateString('bn-BD', {
         dateStyle: 'full',
     });
@@ -15,18 +15,18 @@ const Navbar = () => {
                 <div className="flex items-center justify-between h-16">
 
                     {/* Logo */}
-                      <div className="flex flex-row items-center gap-2 h-auto">
+                    <div className="flex flex-row items-center gap-2 h-auto">
 
-                            <div className="h-10 w-10 flex items-center justify-center bg-blue-500 rounded">
-                                < HiShoppingCart className='h-8 w-8' />
-                            </div>
-                            
-                            <div className='flex flex-col'>
-                                <h2 className='text-2xl mb-0'>বাজার দর</h2>
-                                <p>{date}</p>
-                            </div>
-                            
+                        <div className="h-10 w-10 flex items-center justify-center bg-blue-500 rounded">
+                            < HiShoppingCart className='h-8 w-8' />
                         </div>
+
+                        <div className='flex flex-col leading-tight'>
+                            <h2 className='text-xs sm:text-2xl font-semibold mb-0.5'>বাজার দর</h2>
+                            <p className='text-[9px] sm:text-[14px] text-gray-800'>{date}</p>
+                        </div>
+
+                    </div>
 
                     {/* User Sign and Profile */}
                     <div>

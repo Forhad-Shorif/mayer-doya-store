@@ -69,7 +69,7 @@ const Marquee = async () => {
                                     {/* Kilo ways Batch*/}
                                     <span className="">{item.categoryIcon}</span>
                                     <span className=" text-blue-700 font-semibold">{item.nameBn}</span>
-                                    <span className="text-amber-400 font-bold">{item.today} টাকা/{Bn}</span>
+                                    <span className="text-amber-400 font-bold">{toBengaliNumber(item?.today)} টাকা/{Bn}</span>
 
                                     {/* Change */}
                                     {item.change && (
@@ -79,7 +79,7 @@ const Marquee = async () => {
                                         >
                                             <span>{item.change?.dir === "up" ? "▲" : item.change?.dir === "down" ? "▼" : <span>—</span>}</span>
                                             <span>
-                                                {item.change?.dir === "up" ? <span>{BnNum}</span> : item.change?.dir === "flat" ? <span>০.{toBengaliNumber(BnNum)}</span> : item.change?.pct ? toBengaliNumber(item.change.pct * -1) : 0}%
+                                                {item.change?.dir === "up" ? <span>{BnNum}</span> : item.change?.dir === "flat" ? <span>০.{BnNum}</span> : item.change?.pct ? toBengaliNumber(item.change.pct * -1) : 0}%
                                             </span>
                                         </div>
                                     )}

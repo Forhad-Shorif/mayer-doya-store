@@ -59,7 +59,7 @@ const CategoryProductList = ({ productsData }: CategoryProductListProps) => {
 
                     {/* Select Options */}
                     <select
-                        className="w-[100px] sm:w-[220px] truncate px-3 py-1.5 text-xs sm:text-sm font-medium text-gray-700 border bg-white border-slate-200 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500/25 cursor-pointer"
+                        className="w-[140px] sm:w-[220px] px-3.5 py-2 text-xs sm:text-sm font-medium text-gray-700 bg-white border border-slate-200 rounded-xl shadow-sm appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition-all duration-200 hover:border-blue-400"
                         value={item}
                         onChange={(e) => setItem(e.target.value as "default" | "High" | "Low")}
                     >
