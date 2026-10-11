@@ -27,7 +27,7 @@ const ProductsList = ({ products }: { products: Product[] }) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-3">
             {products.map((product: Product, index: number) => {
 
-                const BnNum = product.change?.pct ? toBengaliNumber(product.change.pct) : 0;
+                const BnNum = product.change?.pct ? toBengaliNumber(product.change.pct) : "০";
                 const BnText = product?.unit ? translateUnit(product.unit) : "টা";
 
                 return (
@@ -71,7 +71,7 @@ const ProductsList = ({ products }: { products: Product[] }) => {
                                     >
                                         <span>{product.change?.dir === "up" ? "▲" : product.change?.dir === "down" ? "▼" : <span>—</span>}</span>
                                         <span>
-                                            {product.change?.dir === "up"? <span>{BnNum}</span> : product.change?.dir === "flat"  ? <span>০.{BnNum}</span> : product.change?.pct ? toBengaliNumber(product.change.pct * -1) : 0}%
+                                            {product.change?.dir === "up"? <span>{BnNum}</span> : product.change?.dir === "flat"  ? <span>০.{BnNum}</span> : product.change?.pct ? toBengaliNumber(product.change.pct * -1) : <span>০</span>}%
                                         </span>
                                     </div>
                                 )}

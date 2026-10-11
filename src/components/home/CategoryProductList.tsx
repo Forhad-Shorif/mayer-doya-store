@@ -81,7 +81,7 @@ const CategoryProductList = ({ productsData }: CategoryProductListProps) => {
 
                 {products.map((product, index) => {
 
-                    const Bn = product.change?.pct ? toBengaliNumber(product.change.pct) : 0;
+                    const Bn = product.change?.pct ? toBengaliNumber(product.change.pct) : "০";
                     // Up or Down
                     return (
                         <Link
@@ -113,7 +113,7 @@ const CategoryProductList = ({ productsData }: CategoryProductListProps) => {
                                         >
                                             <span>{product.change?.dir === "up" ? "▲" : product.change?.dir === "down" ? "▼" : <span>—</span>}</span>
                                             <span>
-                                                {product.change?.dir === "up" ? <span>{Bn}</span> : product.change?.dir === "flat" ? <span>০.{toBengaliNumber(Bn)}</span> : product.change?.pct ? toBengaliNumber(product.change.pct * -1) : 0}%
+                                                {product.change?.dir === "up" ? <span>{Bn}</span> : product.change?.dir === "flat" ? <span>০.{toBengaliNumber(Bn)}</span> : product.change?.pct ? toBengaliNumber(product.change.pct * -1) : <span>০</span>}%
                                             </span>
                                         </div>
                                     )}
