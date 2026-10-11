@@ -17,6 +17,7 @@ interface Types {
 }
 
 const FetchData = async (): Promise<Types[]> => {
+    // Fetching Data
     try {
         const res = await fetch('https://api.abcz.workers.dev/api/bazardor/products', {
             next: { revalidate: 60 }
