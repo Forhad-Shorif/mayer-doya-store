@@ -58,7 +58,7 @@ const Marquee = async () => {
                     {products.map((item: Types, index: number) => {
 
                         const Bn = item?.unit ? translateUnit(item.unit) : "টা";
-                        const BnNum = item.change?.pct ? toBengaliNumber(item.change.pct) : 0;
+                        const BnNum = item.change?.pct ? toBengaliNumber(item.change.pct) : "০";
                         return (
                             <Link key={item.id || index} href={`/details/${item.id}`}>
                                 <div
@@ -79,7 +79,7 @@ const Marquee = async () => {
                                         >
                                             <span>{item.change?.dir === "up" ? "▲" : item.change?.dir === "down" ? "▼" : <span>—</span>}</span>
                                             <span>
-                                                {item.change?.dir === "up" ? <span>{BnNum}</span> : item.change?.dir === "flat" ? <span>০.{BnNum}</span> : item.change?.pct ? toBengaliNumber(item.change.pct * -1) : 0}%
+                                                {item.change?.dir === "up" ? <span>{BnNum}</span> : item.change?.dir === "flat" ? <span>০.{BnNum}</span> : item.change?.pct ? toBengaliNumber(item.change.pct * -1) : <span>০</span>}%
                                             </span>
                                         </div>
                                     )}

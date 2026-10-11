@@ -69,7 +69,7 @@ const DetailsPage = async ({ params }: props) => {
                     const MarketProducts = product.markets || [];
 
                     const Bn = product.unit ? translateUnit(product.unit) : "টা";
-                    const BnNum = product.change?.pct ? toBengaliNumber(product.change.pct) : 0;
+                    const BnNum = product.change?.pct ? toBengaliNumber(product.change.pct) : "০";
                     const priceDiff = Math.abs(product.today - product.yesterday);
 
                     return (
@@ -126,7 +126,7 @@ const DetailsPage = async ({ params }: props) => {
                                     >
                                         <span>{product.change?.dir === "up" ? "▲" : product.change?.dir === "down" ? "▼" : <span>—</span>}</span>
                                         <span>
-                                            {product.change?.dir === "up" ? <span>{BnNum}</span> : product.change?.dir === "flat" ? <span>০.{toBengaliNumber(BnNum)}</span> : product.change?.pct ? toBengaliNumber(product.change.pct * -1) : 0}%
+                                            {product.change?.dir === "up" ? <span>{BnNum}</span> : product.change?.dir === "flat" ? <span>০.{toBengaliNumber(BnNum)}</span> : product.change?.pct ? toBengaliNumber(product.change.pct * -1) : <span>০</span>}%
                                         </span>
                                     </div>
                                 </div>
