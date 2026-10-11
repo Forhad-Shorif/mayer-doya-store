@@ -22,8 +22,8 @@ const Navbar = () => {
                         </div>
 
                         <div className='flex flex-col leading-tight'>
-                            <h2 className='text-xs sm:text-2xl font-semibold mb-0.5'>বাজার দর</h2>
-                            <p className='text-[9px] sm:text-[14px] text-gray-800'>{date}</p>
+                            <h2 className='text-base sm:text-2xl font-semibold mb-0.5'>বাজার দর</h2>
+                            <p className='text-[12px] sm:text-[16px] text-gray-800'>{date}</p>
                         </div>
 
                     </div>
