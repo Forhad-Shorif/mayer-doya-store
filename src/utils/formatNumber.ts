@@ -17,10 +17,4 @@ export const toBengaliNumber = (num: number | string): string => {
         .replace(/[0-9]/g, (digit) => englishToBanglaDigits[digit] || digit);
 };
 
-// import { toBengaliNumber } from "@/src/utils/toBengaliNumber";
 
-// <span>{toBengaliNumber(500)} টাকা</span> 
-// {/* এটি আউটপুট দেখাবে: ৫০০ টাকা */}
-
-// <p>মোট প্রোডাক্ট: {toBengaliNumber(12)}টি</p> 
-// {/* এটি আউটপুট দেখাবে: মোট প্রোডাক্ট: ১২টি */}
