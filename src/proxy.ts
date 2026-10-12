@@ -11,7 +11,7 @@ const session = await auth.api.getSession({
     headers: await headers() // you need to pass the headers object.
 })
   const user = session?.user;
-  console.log(user);
+  
 
   // If user is not logged in, redirect to /signin
   if (!user) {
@@ -20,5 +20,5 @@ const session = await auth.api.getSession({
 }
 
 export const config = {
-  matcher: ['/profile','/details/:path'], // কোন কোন রুটে এই প্রটেকশন বা মিডলওয়্যার কাজ করবে তা এখানে বলে দিতে হবে
+  matcher: ['/profile','/details/:path'],
 }
